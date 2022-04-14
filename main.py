@@ -49,7 +49,7 @@ def get_mode(sorted_data):
         elif 165 < weight < 175 :
             mode_data_for_range["165-175"] += occurence      
     mode_range , mode_occurence = 0 , 0
-    for range , occurence in mode_data_for_range.item():
+    for range, occurence in mode_data_for_range.items():
         if occurence > mode_occurence :
             mode_range , mode_occurence = [int(range.split("-")[0]),int(range.split("-")[1])] , occurence
     mode = float((mode_range[0] + mode_range[1])/2)
